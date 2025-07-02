@@ -1,5 +1,4 @@
 <?php
-// 1. Connect to MySQL
 $server = "localhost";
 $username = "root";
 $password = "";
@@ -11,9 +10,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// 2. Check if form was submitted
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // 3. Get all values from POST
     $full_name = $_POST['full_name'];
     $dob = $_POST['dob'];
     $age = $_POST['age'];
@@ -43,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $income = $_POST['income'];
     $guardian_contact = $_POST['guardian_contact'];
 
-    // 4. Insert into MySQL
+
     $sql = "INSERT INTO applications 
     (full_name, dob, age, gender, nationality, email, phone, aadhar, address,
      university, course, duration, year_of_study, student_id,
