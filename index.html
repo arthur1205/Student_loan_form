@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Loan Application</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Loan Application Form</h1>
+        <form action="index.php" method="POST" enctype="multipart/form-data">
+            <!-- Personal Information -->
+            <h2>Personal Information</h2>
+            <input type="text" name="full_name" placeholder="Full Name" required>
+            <input type="date" name="dob" id="dob" onchange="calculateAge()" required>
+            <input type="number" name="age" id="age" placeholder="Age" readonly>
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <input type="text" name="nationality" placeholder="Nationality" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="aadhar" placeholder="Aadhar Number" required>
+            <textarea name="address" placeholder="Permanent and Current Address" required></textarea>
+
+            <h2>Academic Information</h2>
+            <input type="text" name="university" placeholder="University/College Name" required>
+            <input type="text" name="course" placeholder="Course Name" required>
+            <input type="number" name="duration" placeholder="Duration of Course (Years)" required>
+            <input type="text" name="year_of_study" placeholder="Year of Study (e.g., 2nd year)" required>
+            <input type="text" name="student_id" placeholder="Student ID Number" required>
+            <label>Upload College Admission Letter (PDF)</label>
+            <input type="file" name="admission_letter" accept=".pdf" required>
+
+
+            <h2>Loan Details</h2>
+            <input type="number" name="total_fee" placeholder="Total Course Fee (INR)" required>
+            <input type="number" name="loan_amount" placeholder="Amount Requested as Loan (INR)" required>
+            <input type="number" name="tenure" placeholder="Loan Tenure (in years)" required>
+            <input type="text" name="preferred_bank" placeholder="Preferred Bank" required>
+            <textarea name="reason" placeholder="Reason for Loan" required></textarea>
+            <textarea name="collateral" placeholder="Collateral Details (if any)"></textarea>
+
+
+            <h2>Parent/Guardian Details</h2>
+            <input type="text" name="guardian_name" placeholder="Guardian Name" required>
+            <input type="text" name="relationship" placeholder="Relationship" required>
+            <input type="text" name="occupation" placeholder="Occupation" required>
+            <input type="number" name="income" placeholder="Annual Income (INR)" required>
+            <input type="tel" name="guardian_contact" placeholder="Guardian Contact Number" required>
+            <label>Upload Income Certificate (PDF)</label>
+            <input type="file" name="income_certificate" accept=".pdf" required>
+
+            <input type="submit" value="Apply for Loan">
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
